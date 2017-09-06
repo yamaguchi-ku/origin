@@ -11,7 +11,7 @@ void *PrintHelloWorld(void* arg)
 int main(void)
 {
 	pthread_t thread;
-	pthread_create(&thread, NULL, PrintHelloWorld,(void *)NULL);
+	pthread_create(&thread, NULL, PrintHelloWorld,NULL);
 	pthread_join(thread, NULL);
 	return 0;
 }
