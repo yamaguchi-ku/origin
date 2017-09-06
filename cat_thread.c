@@ -10,6 +10,7 @@ void* cat_repetition(void* args){
 	while((ch = getchar()) != atoi("\n")){
 		fputc(ch, stdout);
 	}
+	pthread_exit(0);
 }
 
 void* cat_fileopen (void *fname){
@@ -27,6 +28,7 @@ void* cat_fileopen (void *fname){
 		}
 	fclose(fp);
 	}
+	pthread_exit(0);
 }
 
 int main(int argc, char *argv[]){
